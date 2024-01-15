@@ -1,0 +1,530 @@
+html{
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6, .logo {
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 20px !important;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    color: #343434;
+}
+.title h3{
+  font-size: 2.5rem;
+  line-height: 44px;
+  font-weight: 800 !important;
+  font-family: "Montserrat", sans-serif !important;
+}
+
+
+
+
+.nav-item a {
+  color: #7f7f90;
+  padding: 20px 0px;
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
+}
+.nav-item a:hover {
+  color: #000;
+  text-decoration: none;
+}
+.nav-item a:hover::before {
+  width: calc(100% - (0.9375rem * 2));
+}
+
+body:not(body:has(:target)) li a[href="#home"],
+body:has(.home:target) li a[href="#home"],
+body:has(.contact:target) li a[href="#contact"],
+body:has(.gallery:target) li a[href="#gallery"],
+body:has(.chefs:target) li a[href="#chefs"] {
+  color: #000;
+}
+.nav-item a::before{
+  content: "";
+  position: absolute;
+  bottom: 20px;
+  /* right: 0; */
+  width: 0px;
+  height: 2px;
+  background: #111;
+  transition: all 0.4s;
+}
+body:not(body:has(:target)) li a[href="#home"]::before,
+body:has(.home:target) li a[href="#home"]::before,
+body:has(.about:target) li a[href="#about"]::before,
+body:has(.services:target) li a[href="#services"]::before,
+body:has(.works:target) li a[href="#works"]::before,
+body:has(.clients:target) li a[href="#clients"]::before,
+body:has(.team:target) li a[href="#team"]::before,
+body:has(.contact:target) li a[href="#contact"]::before {
+  /* width: 50px; */
+  width: calc(100% - (0.5rem * 2));
+}
+
+header{
+    height: 100vh;
+    background-image: url(../imgs/bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+header .bg{
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.65);
+}
+header .links{
+    font-size: 1rem;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.3);
+}
+header h1, header p{
+    font-size: 3rem;
+    color: white;
+}
+header .box p::after{
+    content: '';
+    animation-name: typing;
+    position: relative;
+    font-weight: bold;
+    animation-duration: 13s ;
+    animation-iteration-count: infinite;
+    
+}
+
+header .box span::after{
+    display: inline-block;
+    content: '|';
+    opacity: 0;
+    animation-name: stick;
+    position: absolute;
+    margin-top: -55px;
+    font-size: 3rem;
+    right: -10px;
+    font-weight: 100;
+    animation-duration: 1s ;
+    animation-iteration-count: infinite;
+    
+}
+@keyframes stick{
+    0%{content: '|';opacity: 0%;}
+    50%{content: '|';opacity: 80%;}
+    100%{content: '|';opacity: 0%;}
+}
+@keyframes typing{
+   0.5%{content: '';}
+     1%{content: 'M';}
+   1.5%{content: 'Mo';}
+     2%{content: 'Mos';}
+   2.5%{content: 'Most';}
+     3%{content: 'Mosta';}
+   3.5%{content: 'Mostaf';}
+     4%{content: 'Mostafa';}
+   4.5%{content: 'Mostafa ';}
+     5%{content: 'Mostafa M';}
+   5.5%{content: 'Mostafa Mo';}
+     6%{content: 'Mostafa Moh';}
+   6.5%{content: 'Mostafa Moha';}
+     7%{content: 'Mostafa Moham';}
+   7.5%{content: 'Mostafa Mohame';}
+     8%{content: 'Mostafa Mohamed';}
+    30%{content: 'Mostafa Mohamed';}
+  30.5%{content: 'Mostafa Mohame';}
+    31%{content: 'Mostafa Moham';}
+  31.5%{content: 'Mostafa Moha';}
+    32%{content: 'Mostafa Moh';}
+  32.5%{content: 'Mostafa Mo';}
+    33%{content: 'Mostafa Mo';}
+  33.5%{content: 'Mostafa M';}
+    34%{content: 'Mostafa ';}
+  34.5%{content: 'Mostafa';}
+    35%{content: 'Mostaf';}
+  35.5%{content: 'Mosta';}
+    36%{content: 'Most';}
+  36.5%{content: 'Mos';}
+    37%{content: 'Mo';}
+  37.5%{content: 'M';}
+    38%{content: '';}
+  38.5%{content: '';}
+  39.5%{content: 'D';}
+    40%{content: 'De';}
+  40.5%{content: 'Dev';}
+    41%{content: 'Deve';}
+  41.5%{content: 'Devel';}
+    42%{content: 'Develo';}
+  42.5%{content: 'Develop';}
+    43%{content: 'Develope';}
+  43.5%{content: 'Developer';}
+  65.5%{content: 'Developer';}
+    66%{content: 'Develope';}
+  66.5%{content: 'Develop';}
+    67%{content: 'Develo';}
+  67.5%{content: 'Devel';}
+    68%{content: 'Deve';}
+  68.5%{content: 'Dev';}
+    69%{content: 'De';}
+  69.5%{content: 'D';}
+    70%{content: '';}
+  70.5%{content: 'D';}
+    71%{content: 'De';}
+  71.5%{content: 'Des';}
+    72%{content: 'Desi';}
+  72.5%{content: 'Desig';}
+    73%{content: 'Design';}
+  73.5%{content: 'Designe';}
+    74%{content: 'Designer';}
+    96%{content: 'Designer';}
+  96.5%{content: 'Designe';}
+    97%{content: 'Design';}
+  97.5%{content: 'Desig';}
+    98%{content: 'Desi';}
+  98.5%{content: 'Des';}
+    99%{content: 'De';}
+  99.5%{content: 'D';}
+   100%{content: '';}
+}
+
+section .container{
+  padding: 2rem;
+}
+
+.about .about-img{
+  position: relative;
+  padding: 0 0 0 30px;
+  z-index: 5;
+}
+.about .about-img img{
+  position: relative;
+  z-index: 5;
+}
+
+.about .dotss{
+  width: 80%;
+  height: 80%;
+  background-image: url(../imgs/dots.png);
+  background-repeat: repeat;
+  z-index: 1;
+  position: absolute;
+  bottom: -32px;
+  left: 0px;
+}
+
+.about .about-me-content h3{
+  margin: 0 !important;
+}
+.about-me-content span{
+  color: #999999;
+  font-size: 0.875rem;
+  line-height: 20px;
+}
+
+.about .score1::after{
+    content: '95%';
+    position: absolute;
+    right: 7px;
+}
+.about .score2::after{
+    content: '80%';
+    position: absolute;
+    right: 7px;
+}
+.about .score3::after{
+    content: '90%';
+    position: absolute;
+    right: 7px;
+}
+.btn-dark:hover{
+  color: black !important; 
+  background-color: white;
+}
+
+
+.services{
+  padding: 100px 0 100px 0;
+  
+}
+.title{
+    position: relative;
+    margin-bottom: 2rem;
+}
+.title h3::after{
+    content: "";
+    width: 100%;
+    height: 30px;
+    background-image: url(../imgs/dots.png);
+    background-repeat: repeat;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    z-index: -1;
+}
+
+.about{
+    padding: 4rem 0 4rem 0;
+}
+.about .box{
+    padding: 4rem 3rem;
+}
+.inner-shadow {
+  width: 100%;
+  box-shadow: inset gray 0px 0px 5px 1px; 
+}
+
+.service-card{
+  background-color: #fafafa;
+    padding: 2.5rem 1.3rem;
+    border-radius: 0.3rem;
+    margin-bottom: 3rem;
+
+
+}
+.card-title{
+  font-weight: 900;
+  font-style: normal;
+  font-size: 1.1rem;
+}
+.service-icon{
+    margin-bottom: 20px;
+    background-color: #f4f4f4;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    transition: all ease-in-out 0.4s;
+}
+
+.services .service-card:hover .service-icon{
+    border-color: #CDE1F8;
+    background-color: #1C1C1C;
+    color: white; 
+}
+
+
+
+
+.works .underline button::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: #111;
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  transition: all 0.4s;
+}
+.works .underline .active::after {
+  width: 100%;
+}
+.works .nav-link {
+  color: #1c1c1c !important;
+}
+.works .nav-underline .nav-link {
+  position: relative;
+  border: 0;
+}
+.works .works-card{
+  overflow: hidden;
+  position: relative;
+}
+.mini-title{
+  position: relative;
+  top: 90px;
+  transition: all ease-in-out 0.4s;
+  font-size: 12px;
+  line-height: 13.2px;
+  font-weight: 700;
+}
+.works ul{
+  top: 150px;
+  left: -15px;
+  transition: all ease-in-out 0.4s;
+}
+.works .links ul li a {
+  border: 1px solid #000;
+  color: #fff;
+  background-color: #000;
+  display: block;
+  font-size: 15px;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+}
+.works .links a:hover {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+.works .links{
+  background-color: rgba(255, 255, 255, 0.95);
+    position: absolute;
+    text-align: center;
+    inset: 5px;
+    opacity: 0;
+    transition: 0.5s;
+    top: 10px;
+}
+.works .works-card:hover .links {
+  cursor: pointer;
+  opacity: 0.8;
+  top: 5px;
+}
+.works .works-card:hover .mini-title {
+  top: 120px;
+}
+.works .works-card:hover ul {
+  top: 120px;
+}
+
+
+
+.clients .container{
+  width: 60%;
+}
+.test-img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 15px;
+}
+.clients p{
+  font-size: 0.9375rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  word-spacing: 2px;
+}
+.clients span{
+  color: #888888;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.carousel-indicators [data-bs-target]{
+    width: 10px;
+    height: 10px;
+    gap: 50px;
+    margin-right: 6px;
+    margin-left: 6px;
+    margin-bottom: -26px;
+    border-radius: 50%;
+}
+.carousel-caption{
+  position: static;
+}
+
+.team .img{
+  overflow: hidden;
+  position: relative;
+}
+.team img{
+  transition: all ease-in-out 0.4s;
+}
+.team .img:hover img{
+  scale: 1.2;
+}
+
+.team .card-footer{
+  background-color: #5A5A5A;
+}
+.team .links ul{
+  align-self: center;
+  top: 175px;
+  left: -15px;
+}
+.team .links ul li a {
+  border: 1px solid #000;
+  color: #fff;
+  background-color: #000;
+  display: block;
+  position: relative;
+  font-size: 20px;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  bottom: 50px;
+}
+.team .links a:hover {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+.team .links{
+  background-color: rgba(255, 255, 255, 0.95);
+    position: absolute;
+    text-align: center;
+    inset: 5px;
+    opacity: 0;
+    transition: all ease-in-out 0.5s;
+    transform: rotateY(180deg) scale(0.5, 0.5);
+}
+.team .team-card:hover .links {
+  cursor: pointer;
+  opacity: 0.8;
+  transform: rotateY(0deg) scale(1, 1);
+}
+
+
+
+.contact .container{
+  width: 60%;
+}
+.contact-icon{
+  margin-bottom: 20px;
+    background-color: #f4f4f4;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    transition: all ease-in-out 0.4s;
+}
+.contact .icon {
+  font-size: 25px;
+  margin-bottom: 15px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  background: #f4f4f4;
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+.contact .mb-5:hover .icon{
+  border-color: #CDE1F8;
+  background-color: #1C1C1C;
+  color: white; 
+}
+.contact form, .contact .btn{
+  font-family: Helvetica, sans-serif;
+  font-size: 0.875rem;
+}
+.contact form input, .contact form textarea{
+    background: #f4f4f4 !important;
+}
+span {
+  display: inline-block;
+}
+p {
+  line-height: 1.6;
+  margin: 0;
+  font-size: 15px;
+  color: #748182;
+}
+
+footer{
+    background-color: #1C1C1C;
+}
+footer p{
+    margin: 0;
+    color: #748182;
+    font-size: 0.8125rem;
+  }
+
+
